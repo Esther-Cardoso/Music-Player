@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Raleway", sans-serif;
+}
+
+.player {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 480px;
+  overflow: hidden;
+}
+
+.player .main {
+  width: 100%;
+  height: 100%;
+  background: #222;
+}
+
+.player .main .thumbnail img {
+  width: 100%;
+}
+
+.player .main .seekbar {
+  margin-top: -15px;
+}
+
+.player .main .seekbar input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  outline: none;
+  background-color: #aaa;
+  overflow: hidden;
+}
+
+.player .main .seekbar input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0px;
+  height: 0px;
+  box-shadow: -300px 0px 0px 300px #00acee;
+}
+
+.player .main .details {
+  text-align: center;
+  padding: 15px 0px;
+}
+
+.player .main .details h2 {
+  font-size: 1.125rem;
+  color: #eee;
+  margin-bottom: 5px;
+}
+
+.player .main .details p {
+  font-size: 0.875rem;
+  color: #aaa;
+}
+
+.player .main .controls {
+  display: flex;
+  justify-content: center;
+  margin: 8px 0px;
+}
+
+.player .main .controls > div {
+  margin: 0px 30px;
+  cursor: pointer;
+}
+
+.player .main .controls i {
+  font-size: 1.5rem;
+  color: #ddd;
+}
+
+.player .main .controls > div.play-pause-control i.ph-play-circle {
+  display: none;
+}
+
+.player .main .controls > div.play-pause-control.paused i.ph-play-circle {
+  display: block;
+}
+
+.player .main .controls > div.play-pause-control.paused i.ph-pause-circle {
+  display: none;
+}
